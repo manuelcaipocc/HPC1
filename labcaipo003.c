@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-int main(){
+
 double sum(size_t len,double* x,ptrdiff_t incr)
     {
     double result =0;
@@ -17,8 +17,15 @@ int main()
     for (size_t i=0;i<8;++i)
     {
         x[i]=42;
+	printf("value %.f ",x[i]);
+	printf("addresse %
     }
-    double result=sum(8,x,1);
-    printf("result %f\n",x);
+    double result=sum(8,&x[0],1);
+    printf("Distance %td\n",(char*)(&x[1])-(char*)(&x[0]));
+    printf("result %f\n",result);
+
 }
+
+
+
 
