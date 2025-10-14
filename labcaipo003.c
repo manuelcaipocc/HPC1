@@ -7,7 +7,7 @@ double sum(size_t len,double* x,ptrdiff_t incr)
     double result =0;
     for (size_t i=0;i<len;++i)
        {
-         result +=x[i * incr];
+         result =x[i * incr]+result;
        }
     return result;
     }
@@ -15,7 +15,7 @@ int main()
 {
     double x[8];
     //y sera una variable cuyo contenido sera una direccion de memoria donde hay un double
-    double* y=&x[0];
+    double *y=&x[0];
     for (size_t i=0;i<8;++i)
     {
         x[i]=4;
