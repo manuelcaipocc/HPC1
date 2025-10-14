@@ -18,7 +18,7 @@ int main()
     {
         x[i]=42;
 	printf("value %.f ",x[i]);
-	printf("addresse %
+	printf("addresse %p\n",(void*)&x[i]);
     }
     double result=sum(8,&x[0],1);
     printf("Distance %td\n",(char*)(&x[1])-(char*)(&x[0]));
