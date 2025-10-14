@@ -14,9 +14,13 @@ double sum(size_t len,double* x,ptrdiff_t incr)
 int main()
 {
     double x[8];
+    //y sera una variable cuyo contenido sera una direccion de memoria donde hay un double
+    double* y=&x[0];
     for (size_t i=0;i<8;++i)
     {
-        x[i]=42;
+        x[i]=4;
+	y[i]=5;
+    	printf("Size of %zu ",sizeof(x[i]));
 	printf("value %.f ",x[i]);
 	printf("addresse %p\n",(void*)&x[i]);
     }
@@ -24,6 +28,9 @@ int main()
     printf("Distance %td\n",(char*)(&x[1])-(char*)(&x[0]));
     printf("result %f\n",result);
 
+    printf("Size of x %zu\n", sizeof(x));
+    printf("Size of y %zu\n", sizeof(y));
+    
 }
 
 
