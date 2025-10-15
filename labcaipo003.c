@@ -7,7 +7,10 @@ double sum(size_t len,double* x,ptrdiff_t incr)
     double result =0;
     for (size_t i=0;i<len;++i)
        {
-         result =x[i * incr]+result;
+         	//Cada vez que sumo 1 a mi x, estos haciendo dir(x) + i * sizeof(tipo de varialbe utilizada)
+
+		result =*(&x[0]+i*incr)+result;
+	 
        }
     return result;
     }
